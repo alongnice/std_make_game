@@ -73,6 +73,7 @@ int main( int argc, char** argv ){
 
     //主循环
     while ( true ){
+      cout << "\33[2J\33[1;1H";
         state->draw();                          //通关检测
         if( state->hasCleared() )
             break;                              //游戏结束

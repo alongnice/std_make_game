@@ -75,7 +75,8 @@ int main( int argc, char** argv ){
 
     //主循环
     while ( true ){
-        //首先绘制
+      //      cout << "\33[2J\33[1;1H";
+      //首先绘制
         state->draw();
         //通关检测
         if ( state->hasCleared() ){
@@ -233,7 +234,7 @@ void State::update( char input ){
         //检测同方向上的下下个格子是否是合理值范围
         int tx2 = tx + dx;
         int ty2 = ty + dy;
-        if ( tx2 < 0 || ty2 < 0 || tx2 >= w || ty >= h ){
+        if ( tx2 < 0 || ty2 < 0 || tx2 >= w || ty2 >= h ){
             return ;
         }
         if ( ( o( tx2, ty2) & ~OBJ_GOAL_FLAG ) == OBJ_SPACE ){
