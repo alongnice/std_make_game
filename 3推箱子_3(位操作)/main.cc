@@ -240,7 +240,7 @@ void State::update( char input ){
             //按顺序替换
             o ( tx2, ty2 ) = ( o( tx2, ty2) & OBJ_GOAL_FLAG ) | OBJ_BLOCK;
             o ( tx, ty ) = ( o( tx, ty) & OBJ_GOAL_FLAG )| OBJ_BLOCK;
-            o ( x, y ) = ( o( x, y) & OBJ_GOAL_FLAG ) | OBJ_BLOCK;
+            o ( x, y ) = ( o( x, y) & OBJ_GOAL_FLAG ) | OBJ_SPACE;
         }
     }
 }
